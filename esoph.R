@@ -8,7 +8,9 @@ library(ggcorrplot)
 df = read.csv('https://raw.githubusercontent.com/vincentarelbundock/Rdatasets/master/csv/datasets/esoph.csv', na.string='.',stringsAsFactors=FALSE)
 summary(df)
 
-#NAch Alter gruppieren, Zahl der Fälle anzeigen lassen
+
+
+#Nach Alter gruppieren, Zahl der Fälle anzeigen lassen
 d1<- esoph %>%  group_by(agegp) %>%
   summarise(count = n(), total_cases = sum(ncases))
 
